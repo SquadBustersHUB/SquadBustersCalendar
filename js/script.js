@@ -4,7 +4,7 @@ const calendarData = {
         startDay: 0, // Monday
         images: {
             1: "April/imageapril1.png",
-            2: "April/imageapril2.png",
+            2: "April/imageapril2.png", <img src="Error.src" onerror="this.style.display='none'"/>
             // Add images for other days if needed
         }
     },
