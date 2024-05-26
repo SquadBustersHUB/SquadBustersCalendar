@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>May 2024 Calendar</title>
+    <title>Calendar 2024</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,6 +14,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            flex-direction: column;
         }
         .calendar {
             width: 80%;
@@ -29,13 +30,27 @@
             font-size: 2em;
             position: relative;
         }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .navigation button {
+            background: #6A0DAD;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 5px;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
             table-layout: fixed;
         }
         th, td {
-            border: 1px solid #fff; /* Retain white borders */
+            border: 1px solid #fff;
             text-align: center;
             position: relative;
         }
@@ -46,8 +61,8 @@
         }
         td {
             background: rgba(255, 255, 255, 0.1);
-            width: 100px; /* Ensuring the width of the boxes */
-            height: 100px; /* Ensuring the height of the boxes to make them square */
+            width: 100px;
+            height: 100px;
         }
         .day-number {
             position: absolute;
@@ -65,8 +80,12 @@
     </style>
 </head>
 <body>
+    <div class="navigation">
+        <button id="prevMonth">Previous</button>
+        <button id="nextMonth">Next</button>
+    </div>
     <div class="calendar">
-        <div class="calendar-header">
+        <div class="calendar-header" id="calendarHeader">
             May 2024
         </div>
         <table>
@@ -81,54 +100,103 @@
                     <th>Sunday</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td><span class="day-number"><b>1</b></span><img src="image1.png" alt="Image 1" class="day-image"></td>
-                    <td><span class="day-number"><b>2</b></span><img src="image2.png" alt="Image 2" class="day-image"></td>
-                    <td><span class="day-number"><b>3</b></span><img src="image3.png" alt="Image 3" class="day-image"></td>
-                    <td><span class="day-number"><b>4</b></span><img src="image4.png" alt="Image 4" class="day-image"></td>
-                    <td><span class="day-number"><b>5</b></span><img src="image5.png" alt="Image 5" class="day-image"></td>
-                </tr>
-                <tr>
-                    <td><span class="day-number"><b>6</b></span><img src="image6.png" alt="Image 6" class="day-image"></td>
-                    <td><span class="day-number"><b>7</b></span><img src="image7.png" alt="Image 7" class="day-image"></td>
-                    <td><span class="day-number"><b>8</b></span><img src="image8.png" alt="Image 8" class="day-image"></td>
-                    <td><span class="day-number"><b>9</b></span><img src="image9.png" alt="Image 9" class="day-image"></td>
-                    <td><span class="day-number"><b>10</b></span><img src="image10.png" alt="Image 10" class="day-image"></td>
-                    <td><span class="day-number"><b>11</b></span><img src="image11.png" alt="Image 11" class="day-image"></td>
-                    <td><span class="day-number"><b>12</b></span><img src="image12.png" alt="Image 12" class="day-image"></td>
-                </tr>
-                <tr>
-                    <td><span class="day-number"><b>13</b></span><img src="image13.png" alt="Image 13" class="day-image"></td>
-                    <td><span class="day-number"><b>14</b></span><img src="image14.png" alt="Image 14" class="day-image"></td>
-                    <td><span class="day-number"><b>15</b></span><img src="image15.png" alt="Image 15" class="day-image"></td>
-                    <td><span class="day-number"><b>16</b></span><img src="image16.png" alt="Image 16" class="day-image"></td>
-                    <td><span class="day-number"><b>17</b></span><img src="image17.png" alt="Image 17" class="day-image"></td>
-                    <td><span class="day-number"><b>18</b></span><img src="image18.png" alt="Image 18" class="day-image"></td>
-                    <td><span class="day-number"><b>19</b></span><img src="image19.png" alt="Image 19" class="day-image"></td>
-                </tr>
-                <tr>
-                    <td><span class="day-number"><b>20</b></span><img src="image20.png" alt="Image 20" class="day-image"></td>
-                    <td><span class="day-number"><b>21</b></span><img src="image21.png" alt="Image 21" class="day-image"></td>
-                    <td><span class="day-number"><b>22</b></span><img src="image22.png" alt="Image 22" class="day-image"></td>
-                    <td><span class="day-number"><b>23</b></span><img src="image23.png" alt="Image 23" class="day-image"></td>
-                    <td><span class="day-number"><b>24</b></span><img src="image24.png" alt="Image 24" class="day-image"></td>
-                    <td><span class="day-number"><b>25</b></span><img src="image25.png" alt="Image 25" class="day-image"></td>
-                    <td><span class="day-number"><b>26</b></span><img src="image26.png" alt="Image 26" class="day-image"></td>
-                </tr>
-                <tr>
-                    <td><span class="day-number"><b>27</b></span><img src="image27.png" alt="Image 27" class="day-image"></td>
-                    <td><span class="day-number"><b>28</b></span><img src="image28.png" alt="Image 28" class="day-image"></td>
-                    <td><span class="day-number"><b>29</b></span><img src="image29.png" alt="Image 29" class="day-image"></td>
-                    <td><span class="day-number"><b>30</b></span><img src="image30.png" alt="Image 30" class="day-image"></td>
-                    <td><span class="day-number"><b>31</b></span><img src="image31.png" alt="Image 31" class="day-image"></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+            <tbody id="calendarBody">
+                <!-- Calendar rows will be generated by JavaScript -->
             </tbody>
         </table>
     </div>
+    <script>
+        const calendarData = {
+            "April 2024": {
+                days: 30,
+                startDay: 1 // Monday
+            },
+            "May 2024": {
+                days: 31,
+                startDay: 3 // Wednesday
+            },
+            "June 2024": {
+                days: 30,
+                startDay: 6 // Saturday
+            },
+            "July 2024": {
+                days: 31,
+                startDay: 1 // Monday
+            },
+            "August 2024": {
+                days: 31,
+                startDay: 4 // Thursday
+            },
+            "September 2024": {
+                days: 30,
+                startDay: 7 // Sunday
+            },
+            "October 2024": {
+                days: 31,
+                startDay: 2 // Tuesday
+            },
+            "November 2024": {
+                days: 30,
+                startDay: 5 // Friday
+            },
+            "December 2024": {
+                days: 31,
+                startDay: 7 // Sunday
+            }
+        };
+
+        let currentMonthIndex = 1;
+        const months = Object.keys(calendarData);
+
+        function generateCalendar(month) {
+            const monthData = calendarData[month];
+            const daysInMonth = monthData.days;
+            const startDay = monthData.startDay;
+            const calendarBody = document.getElementById("calendarBody");
+            const calendarHeader = document.getElementById("calendarHeader");
+            
+            calendarHeader.innerHTML = month;
+            calendarBody.innerHTML = '';
+
+            let date = 1;
+            for (let i = 0; i < 6; i++) {
+                const row = document.createElement("tr");
+
+                for (let j = 0; j < 7; j++) {
+                    const cell = document.createElement("td");
+
+                    if (i === 0 && j < startDay) {
+                        cell.innerHTML = "";
+                    } else if (date > daysInMonth) {
+                        break;
+                    } else {
+                        cell.innerHTML = `<span class="day-number"><b>${date}</b></span>`;
+                        // Uncomment the next line and provide actual image paths if needed
+                        // cell.innerHTML += `<img src="image${date}.png" alt="Image ${date}" class="day-image">`;
+                        date++;
+                    }
+                    row.appendChild(cell);
+                }
+                calendarBody.appendChild(row);
+            }
+        }
+
+        document.getElementById("prevMonth").addEventListener("click", () => {
+            if (currentMonthIndex > 0) {
+                currentMonthIndex--;
+                generateCalendar(months[currentMonthIndex]);
+            }
+        });
+
+        document.getElementById("nextMonth").addEventListener("click", () => {
+            if (currentMonthIndex < months.length - 1) {
+                currentMonthIndex++;
+                generateCalendar(months[currentMonthIndex]);
+            }
+        });
+
+        // Initialize the calendar
+        generateCalendar(months[currentMonthIndex]);
+    </script>
 </body>
 </html>
