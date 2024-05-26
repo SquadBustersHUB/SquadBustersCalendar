@@ -1,0 +1,20 @@
+your-repo/
+│
+├── index.html
+├── css/
+│   └── styles.css (if you move styles to a separate file)
+├── js/
+│   └── script.js (if you move scripts to a separate file)
+├── April/
+│   ├── imageapril1.png
+│   ├── imageapril2.png
+│   └── ...
+├── May/
+│   ├── imagemay1.png
+│   ├── imagemay2.png
+│   └── ...
+├── June/
+│   ├── imagejune1.png
+│   ├── imagejune2.png
+│   └── ...
+└── ...
