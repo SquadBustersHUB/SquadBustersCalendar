@@ -109,39 +109,84 @@
         const calendarData = {
             "April 2024": {
                 days: 30,
-                startDay: 0 // Monday
+                startDay: 0, // Monday
+                images: {
+                    1: "image1.png",
+                    2: "image2.png",
+                    // Add images for other days if needed
+                }
             },
             "May 2024": {
                 days: 31,
-                startDay: 2 // Wednesday
+                startDay: 3, // Wednesday
+                images: {
+                    1: "image1.png",
+                    2: "image2.png",
+                    // Add images for other days if needed
+                }
             },
             "June 2024": {
                 days: 30,
-                startDay: 5 // Saturday
+                startDay: 5, // Saturday
+                images: {
+                    1: "image1.png",
+                    2: "image2.png",
+                    // Add images for other days if needed
+                }
             },
             "July 2024": {
                 days: 31,
-                startDay: 0 // Monday
+                startDay: 0, // Monday
+                images: {
+                    1: "image1.png",
+                    2: "image2.png",
+                    // Add images for other days if needed
+                }
             },
             "August 2024": {
                 days: 31,
-                startDay: 3 // Thursday
+                startDay: 3, // Thursday
+                images: {
+                    1: "image1.png",
+                    2: "image2.png",
+                    // Add images for other days if needed
+                }
             },
             "September 2024": {
                 days: 30,
-                startDay: 6 // Sunday
+                startDay: 6, // Sunday
+                images: {
+                    1: "image1.png",
+                    2: "image2.png",
+                    // Add images for other days if needed
+                }
             },
             "October 2024": {
                 days: 31,
-                startDay: 1 // Tuesday
+                startDay: 1, // Tuesday
+                images: {
+                    1: "image1.png",
+                    2: "image2.png",
+                    // Add images for other days if needed
+                }
             },
             "November 2024": {
                 days: 30,
-                startDay: 4 // Friday
+                startDay: 4, // Friday
+                images: {
+                    1: "image1.png",
+                    2: "image2.png",
+                    // Add images for other days if needed
+                }
             },
             "December 2024": {
                 days: 31,
-                startDay: 6 // Sunday
+                startDay: 6, // Sunday
+                images: {
+                    1: "image1.png",
+                    2: "image2.png",
+                    // Add images for other days if needed
+                }
             }
         };
 
@@ -152,6 +197,7 @@
             const monthData = calendarData[month];
             const daysInMonth = monthData.days;
             const startDay = monthData.startDay;
+            const images = monthData.images || {};
             const calendarBody = document.getElementById("calendarBody");
             const calendarHeader = document.getElementById("calendarHeader");
             
@@ -171,8 +217,9 @@
                         break;
                     } else {
                         cell.innerHTML = `<span class="day-number"><b>${date}</b></span>`;
-                        // Uncomment the next line and provide actual image paths if needed
-                        // cell.innerHTML += `<img src="image${date}.png" alt="Image ${date}" class="day-image">`;
+                        if (images[date]) {
+                            cell.innerHTML += `<img src="${images[date]}" alt="Image ${date}" class="day-image">`;
+                        }
                         date++;
                     }
                     row.appendChild(cell);
