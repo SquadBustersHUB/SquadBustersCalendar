@@ -1,20 +1,87 @@
-your-repo/
-│
-├── index.html
-├── css/
-│   └── styles.css (if you move styles to a separate file)
-├── js/
-│   └── script.js (if you move scripts to a separate file)
-├── April/
-│   ├── imageapril1.png
-│   ├── imageapril2.png
-│   └── ...
-├── May/
-│   ├── imagemay1.png
-│   ├── imagemay2.png
-│   └── ...
-├── June/
-│   ├── imagejune1.png
-│   ├── imagejune2.png
-│   └── ...
-└── ...
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #9400D3, #32CD32);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.navigation {
+    margin: 20px 0;
+}
+
+button {
+    background-color: #6A0DAD;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #FFA500;
+}
+
+.calendar {
+    width: 80%;
+    max-width: 800px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.calendar-header {
+    background: #FFA500;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 2em;
+    position: relative;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th, td {
+    border: 1px solid #fff;
+    text-align: center;
+    position: relative;
+}
+
+th {
+    background: #6A0DAD;
+    padding: 10px;
+    height: auto;
+}
+
+td {
+    background: rgba(255, 255, 255, 0.1);
+    width: 100px;
+    height: 100px;
+}
+
+.day-number {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-weight: bold;
+}
+
+.day-image {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
