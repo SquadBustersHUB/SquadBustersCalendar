@@ -10,7 +10,7 @@ const calendarData = {
     },
     "May 2024": {
         days: 31,
-        startDay: 3, // Wednesday
+        startDay: 2, // Wednesday
         images: {
             1: "May/imagemay1.png",
             2: "May/imagemay2.png",
