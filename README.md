@@ -1,6 +1,9 @@
 # Calendar 2024
-This is my very first time I created something like this so it might not me perfect.
+
 This is a simple web-based calendar application for the year 2024. It allows users to navigate through different months and view images associated with specific days.
+
+## About Me
+This is my very first time I created something like this so it might not me perfect.
 
 ## Features
 
