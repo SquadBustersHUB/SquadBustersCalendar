@@ -33,7 +33,9 @@
         .navigation {
             display: flex;
             justify-content: space-between;
-            padding: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
         }
         .navigation button {
             background: #6A0DAD;
@@ -118,7 +120,7 @@
             },
             "May 2024": {
                 days: 31,
-                startDay: 2, // Wednesday
+                startDay: 3, // Wednesday
                 images: {
                     1: "image1.png",
                     2: "image2.png",
@@ -214,7 +216,7 @@
                     if (i === 0 && j < startDay) {
                         cell.innerHTML = "";
                     } else if (date > daysInMonth) {
-                        break;
+                        cell.innerHTML = "";
                     } else {
                         cell.innerHTML = `<span class="day-number"><b>${date}</b></span>`;
                         if (images[date]) {
