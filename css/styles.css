@@ -84,4 +84,7 @@ td {
     position: absolute;
     bottom: 6px;
     right: 11px;
+    /* Hide broken image icon */
+    background-color: #fff; /* Set to whatever color matches your page background */
+    visibility: hidden;
 }
