@@ -82,7 +82,7 @@ const calendarData = {
     }
 };
 
-let currentMonthIndex = 1;
+let currentMonthIndex = 1; // Assuming starting from May 2024
 const months = Object.keys(calendarData);
 
 function generateCalendar(month) {
@@ -92,7 +92,7 @@ function generateCalendar(month) {
     const images = monthData.images || {};
     const calendarBody = document.getElementById("calendarBody");
     const calendarHeader = document.getElementById("calendarHeader");
-    
+
     calendarHeader.innerHTML = month;
     calendarBody.innerHTML = '';
 
