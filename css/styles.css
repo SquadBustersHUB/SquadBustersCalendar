@@ -85,11 +85,11 @@ td {
 }
 
 .day-image {
-    width: 40px;
-    height: 40px;
+    width: 85px;
+    height: 85px;
     position: absolute;
-    bottom: 5px;
-    right: 5px;
+    bottom: 6px;
+    right: 11px;
 }
 
 .modal {
