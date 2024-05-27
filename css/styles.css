@@ -139,11 +139,11 @@ td {
 
     th, td {
         height: 60px;
-        font-size: 0.8em; /* Reduce font size for better fit */
+        font-size: 0.7em; /* Reduce font size for better fit */
     }
 
     th {
-        padding: 5px; /* Adjust padding to fit text */
+        padding: 4px; /* Adjust padding to fit text */
     }
 
     .day-image {
@@ -164,11 +164,11 @@ td {
 @media (max-width: 480px) {
     th, td {
         height: 50px;
-        font-size: 0.7em; /* Further reduce font size for smaller screens */
+        font-size: 0.6em; /* Further reduce font size for smaller screens */
     }
 
     th {
-        padding: 3px; /* Further adjust padding */
+        padding: 2px; /* Further adjust padding */
     }
 
     .day-image {
