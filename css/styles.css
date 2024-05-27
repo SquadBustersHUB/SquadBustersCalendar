@@ -131,6 +131,24 @@ td {
     cursor: pointer;
 }
 
+.x-link {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.x-link a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.x-link img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .calendar {
