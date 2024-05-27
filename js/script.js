@@ -3,7 +3,7 @@ const calendarData = {
         days: 30,
         startDay: 0, // Monday
         images: {
-            23: { src: "April/imageapril23.png", text: "Event details for April 23st" },
+            23: { src: "April/imageapril23.png", text: "This is a test to see if it works." },
             25: { src: "April/imageapril25.png", text: "Event details for April 25nd" },
             26: { src: "April/imageapril26.png", text: "Event details for April 26nd" },
             // Add images and texts for other days if needed
