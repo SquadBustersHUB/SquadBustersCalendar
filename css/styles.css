@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'SSquadLatin';
-    src: url('../fonts/SSquadLatin-Bold.ttf') format('truetype');
+    font-family: 'SquadLatin';
+    src: url('../fonts/SquadLatin-Bold.ttf') format('truetype');
     font-weight: bold;
 }
 
@@ -113,7 +113,7 @@ td {
     border: 1px solid #888;
     width: 80%;
     max-width: 500px;
-    font-family: 'SSquadLatin', Arial, sans-serif;
+    font-family: 'SquadLatin', Arial, sans-serif;
     font-weight: bold;
 }
 
