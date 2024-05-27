@@ -139,7 +139,7 @@ td {
 
     th, td {
         height: 60px;
-        font-size: 0.7em; /* Reduce font size for better fit */
+        font-size: 0.6em; /* Reduce font size for better fit */
     }
 
     th {
@@ -164,7 +164,7 @@ td {
 @media (max-width: 480px) {
     th, td {
         height: 50px;
-        font-size: 0.6em; /* Further reduce font size for smaller screens */
+        font-size: 0.5em; /* Further reduce font size for smaller screens */
     }
 
     th {
