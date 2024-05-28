@@ -141,12 +141,12 @@ td {
     align-items: center;
     text-decoration: none;
     color: #fff;
-    font-size: 1.2em;
+    font-size: 0.7em;
 }
 
 .x-link img {
-    width: 30px;
-    height: 30px;
+    width: 15px;
+    height: 15px;
     margin-right: 10px;
 }
 /* Responsive Design */
