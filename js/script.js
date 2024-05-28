@@ -11,7 +11,7 @@ const calendarData = {
     },
     "May 2024": {
         days: 31,
-        startDay: 3, // Wednesday
+        startDay: 2, // Wednesday
         images: {
             1: { src: "May/imagemay1.png", text: "Event details for May 1st" },
             2: { src: "May/imagemay2.png", text: "Event details for May 2nd" },
