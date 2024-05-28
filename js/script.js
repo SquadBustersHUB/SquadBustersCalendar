@@ -3,9 +3,7 @@ const calendarData = {
         days: 30,
         startDay: 0, // Monday
         images: {
-            23: { src: "April/imageapril23.png", text: "This is a test to see if it works." },
-            25: { src: "April/imageapril25.png", text: "Event details for April 25nd" },
-            26: { src: "April/imageapril26.png", text: "Event details for April 26nd" },
+            23: { src: "April/imageapril23.png", text: "Soft launch Squad Busters" },
             // Add images and texts for other days if needed
         }
     },
@@ -13,8 +11,7 @@ const calendarData = {
         days: 31,
         startDay: 2, // Wednesday
         images: {
-            1: { src: "May/imagemay1.png", text: "Event details for May 1st" },
-            2: { src: "May/imagemay2.png", text: "Event details for May 2nd" },
+            29: { src: "May/imagemay29.png", text: "Global launch Squad Busters." },
             // Add images and texts for other days if needed
         }
     },
