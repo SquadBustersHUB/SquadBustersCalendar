@@ -20,7 +20,6 @@ const calendarData = {
         startDay: 5, // Saturday
         images: {
             17: { src: "June/imagejune17.png", text: "The Ninja Goblin was the first ever skin in Squad Busters." },
-            2: { src: "June/imagejune2.png", text: "Event details for June 2nd" },
             // Add images and texts for other days if needed
         }
     },
