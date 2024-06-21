@@ -169,3 +169,69 @@ document.getElementById("nextMonth").addEventListener("click", () => {
 });
 
 generateCalendar(months[currentMonthIndex]);
+
+const suggestionForm = document.getElementById("suggestionForm");
+    const suggestionInput = document.getElementById("suggestionInput");
+    const suggestionsList = document.getElementById("suggestionsList");
+
+    function loadSuggestions() {
+        const suggestions = JSON.parse(localStorage.getItem("suggestions")) || [];
+        suggestionsList.innerHTML = '';
+        suggestions.forEach((suggestion, index) => {
+            const suggestionItem = document.createElement("div");
+            suggestionItem.className = "suggestion-item";
+            suggestionItem.innerHTML = `
+                <h3>Suggestion ${index + 1}</h3>
+                <p>${suggestion.text}</p>
+                <div class="comments-list" id="commentsList${index}"></div>
+                <form class="comment-form" data-index="${index}">
+                    <input type="text" class="comment-input" placeholder="Add a comment" required>
+                    <button type="submit" class="comment-button">Comment</button>
+                </form>
+            `;
+            suggestionsList.appendChild(suggestionItem);
+            loadComments(index, suggestion.comments);
+        });
+    }
+
+    function loadComments(suggestionIndex, comments) {
+        const commentsList = document.getElementById(`commentsList${suggestionIndex}`);
+        commentsList.innerHTML = '';
+        comments.forEach(comment => {
+            const commentItem = document.createElement("div");
+            commentItem.className = "comment-item";
+            commentItem.textContent = comment;
+            commentsList.appendChild(commentItem);
+        });
+    }
+
+    suggestionForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const suggestionText = suggestionInput.value.trim();
+        if (suggestionText) {
+            const suggestions = JSON.parse(localStorage.getItem("suggestions")) || [];
+            suggestions.push({ text: suggestionText, comments: [] });
+            localStorage.setItem("suggestions", JSON.stringify(suggestions));
+            suggestionInput.value = '';
+            loadSuggestions();
+        }
+    });
+
+    suggestionsList.addEventListener("submit", (event) => {
+        if (event.target.classList.contains("comment-form")) {
+            event.preventDefault();
+            const commentInput = event.target.querySelector(".comment-input");
+            const commentText = commentInput.value.trim();
+            const suggestionIndex = event.target.dataset.index;
+            if (commentText) {
+                const suggestions = JSON.parse(localStorage.getItem("suggestions"));
+                suggestions[suggestionIndex].comments.push(commentText);
+                localStorage.setItem("suggestions", JSON.stringify(suggestions));
+                commentInput.value = '';
+                loadComments(suggestionIndex, suggestions[suggestionIndex].comments);
+            }
+        }
+    });
+
+    loadSuggestions();
+});
