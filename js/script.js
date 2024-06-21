@@ -77,11 +77,24 @@ const months = Object.keys(calendarData);
 
 function getCurrentMonthIndex() {
     const currentDate = new Date();
-    const currentMonthName = currentDate.toLocaleString('default', { month: 'long' }) + " 2024";
+    const currentMonth = currentDate.getMonth();
+    const currentYear = currentDate.getFullYear();
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const currentMonthName = monthNames[currentMonth] + " " + currentYear;
+    
+    console.log("Current date: ", currentDate);
+    console.log("Calculated current month name: ", currentMonthName);
+    console.log("Months array: ", months);
+    
     return months.indexOf(currentMonthName);
 }
 
 let currentMonthIndex = getCurrentMonthIndex();
+
+if (currentMonthIndex === -1) {
+    // Default to the first month if current month is not found (for debug purposes)
+    currentMonthIndex = 0;
+}
 
 function generateCalendar(month) {
     const monthData = calendarData[month];
