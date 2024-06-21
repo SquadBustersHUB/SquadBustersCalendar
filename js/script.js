@@ -27,8 +27,7 @@ const calendarData = {
         days: 31,
         startDay: 0, // Monday
         images: {
-            1: { src: "July/imagejuly1.png", text: "Event details for July 1st" },
-            2: { src: "July/imagejuly2.png", text: "Event details for July 2nd" },
+
             // Add images and texts for other days if needed
         }
     },
@@ -36,8 +35,7 @@ const calendarData = {
         days: 31,
         startDay: 3, // Thursday
         images: {
-            1: { src: "August/imageaugust1.png", text: "Event details for August 1st" },
-            2: { src: "August/imageaugust2.png", text: "Event details for August 2nd" },
+
             // Add images and texts for other days if needed
         }
     },
@@ -45,8 +43,7 @@ const calendarData = {
         days: 30,
         startDay: 6, // Sunday
         images: {
-            1: { src: "September/imageseptember1.png", text: "Event details for September 1st" },
-            2: { src: "September/imageseptember2.png", text: "Event details for September 2nd" },
+
             // Add images and texts for other days if needed
         }
     },
@@ -54,8 +51,7 @@ const calendarData = {
         days: 31,
         startDay: 1, // Tuesday
         images: {
-            1: { src: "October/imageoctober1.png", text: "Event details for October 1st" },
-            2: { src: "October/imageoctober2.png", text: "Event details for October 2nd" },
+
             // Add images and texts for other days if needed
         }
     },
@@ -63,8 +59,7 @@ const calendarData = {
         days: 30,
         startDay: 4, // Friday
         images: {
-            1: { src: "November/imagenovember1.png", text: "Event details for November 1st" },
-            2: { src: "November/imagenovember2.png", text: "Event details for November 2nd" },
+
             // Add images and texts for other days if needed
         }
     },
@@ -72,7 +67,7 @@ const calendarData = {
         days: 31,
         startDay: 6, // Sunday
         images: {
-            1: { src: "December/imagedecember1.png", text: "Event details for December 1st" },
+
              // Add images and texts for other days if needed
         }
     }
