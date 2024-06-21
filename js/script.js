@@ -78,8 +78,15 @@ const calendarData = {
     }
 };
 
-let currentMonthIndex = 1; // Assuming starting from May 2024
 const months = Object.keys(calendarData);
+
+function getCurrentMonthIndex() {
+    const currentDate = new Date();
+    const currentMonthName = currentDate.toLocaleString('default', { month: 'long' }) + " 2024";
+    return months.indexOf(currentMonthName);
+}
+
+let currentMonthIndex = getCurrentMonthIndex();
 
 function generateCalendar(month) {
     const monthData = calendarData[month];
@@ -115,7 +122,6 @@ function generateCalendar(month) {
         calendarBody.appendChild(row);
     }
 
-    // Add click event listener for images
     const imagesInCalendar = document.querySelectorAll(".day-image");
     imagesInCalendar.forEach(image => {
         image.addEventListener("click", (event) => {
@@ -126,14 +132,12 @@ function generateCalendar(month) {
         });
     });
 
-    // Add click event listener for modal close button
     const modalClose = document.querySelector(".close");
     modalClose.addEventListener("click", () => {
         const modal = document.getElementById("modal");
         modal.style.display = "none";
     });
 
-    // Close modal when clicking outside of it
     window.addEventListener("click", (event) => {
         const modal = document.getElementById("modal");
         if (event.target === modal) {
@@ -156,5 +160,4 @@ document.getElementById("nextMonth").addEventListener("click", () => {
     }
 });
 
-// Initialize the calendar
 generateCalendar(months[currentMonthIndex]);
